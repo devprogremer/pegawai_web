@@ -1,0 +1,19 @@
+CREATE TABLE pegawai (
+    id_pegawai INT PRIMARY KEY AUTO_INCREMENT,
+    foto VARCHAR(255),
+    nama_pegawai VARCHAR(100),
+    jenis_kelamin ENUM('L', 'P'),
+    tgl_lahir DATE,
+    id_jabatan INT,
+    keterangan TEXT
+);
+CREATE TABLE jabatan (
+    id_jabatan INT PRIMARY KEY AUTO_INCREMENT,
+    nama_jabatan VARCHAR(50)
+);
+CREATE TABLE user (
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    password VARCHAR(255)
+);
+INSERT INTO user (username, password) VALUES ('admin', MD5('admin123'));
